@@ -4,21 +4,19 @@ This project simulates a real-world AML/KYC analyst workflow to detect and flag 
 
 Project Files
 
-`generate_transactions.py` → Creates 5,000 fake banking transactions using Faker and exports to Excel
-`detect_suspicious.py` → Applies 3 AML rules and flags suspicious transactions
-`synthetic_transactions.xlsx` → Raw transaction data (auto-generated)
-`suspicious_transactions_report.xlsx` → Final filtered report with flagged transactions
-(Optional) Excel Dashboard → Built using filters, slicers, and conditional formatting (no PivotTables)
+**`generate_transactions.py**→ Creates 5,000 fake banking transactions using Faker and exports to Excel
+**detect_suspicious.py** → Applies 3 AML rules and flags suspicious transactions
+**synthetic_transactions.xlsx** → Raw transaction data (auto-generated)
+**suspicious_transactions_report.xlsx** → Final filtered report with flagged transactions
+*Excel Dashboard* → Built using filters, slicers, and conditional formatting (no PivotTables)
 
 
 
 # Detection Logic
-
-| Rule       | Description                                                             |
-|            |                                                                         |
-| **Rule 1** | Transactions over ₹10,00,000                                            |
-| **Rule 2** | More than 3 high-value transactions by the same account on the same day |
-| **Rule 3** | Same device ID used by 5 or more different accounts                     |
+                                                                       |
+**Rule 1**Transactions over ₹10,00,000                                            
+**Rule 2** high-value transactions by the same account on the same day
+**Rule 3**Same device ID used by 5 or more different accounts                     
 
 
 
@@ -34,7 +32,7 @@ Project Files
 
 The `suspicious_transactions_report.xlsx` file includes:
 `transaction_id`, `account_id`, `txn_amount`, `txn_time`, `location`, `device_id`
-Flags: `high_value_flag`, `freq_flag`, `device_flag`, `suspicious`
+*Flags*: `high_value_flag`, `freq_flag`, `device_flag`, `suspicious`
 
 
 
@@ -43,7 +41,7 @@ Flags: `high_value_flag`, `freq_flag`, `device_flag`, `suspicious`
 1. Install Python 3.13+
 2. Install required libraries:
 
-pip install pandas openpyxl faker
+   pip install pandas openpyxl faker
 
 3. Run the scripts:
 python generate_transactions.py
