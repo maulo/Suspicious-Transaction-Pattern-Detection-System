@@ -12,7 +12,7 @@ Project Files
 
 
 # Detection Logic
-                                                                                                                                      |
+                                                                                                                                      
 | Rule | Description |
 |------|-------------|
 | **Rule 1** | Transactions over ₹10,00,000 |
