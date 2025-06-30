@@ -1,9 +1,7 @@
 import pandas as pd
 
-# Load the Excel file
 df = pd.read_excel("synthetic_transactions.xlsx")
 
-# Ensure datetime format
 df['txn_time'] = pd.to_datetime(df['txn_time'])
 df['txn_date'] = df['txn_time'].dt.date
 
@@ -26,6 +24,6 @@ df['device_flag'] = df['device_id'].isin(suspicious_devices)
 # Final suspicious flag
 df['suspicious'] = df[['high_value_flag', 'freq_flag', 'device_flag']].any(axis=1)
 
-# Export only suspicious transactions to Excel
+# Export to Excel
 df[df['suspicious']].to_excel("suspicious_transactions_report.xlsx", index=False)
 print("✅ Report saved: suspicious_transactions_report.xlsx")
