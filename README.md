@@ -14,9 +14,9 @@ Project Files
 
 # Detection Logic
                                                                        |
-**Rule 1**Transactions over ₹10,00,000                                            
-**Rule 2** high-value transactions by the same account on the same day
-**Rule 3**Same device ID used by 5 or more different accounts                     
+**Rule 1** Transactions over ₹10,00,000                                            
+**Rule 2** High-value transactions by the same account on the same day
+**Rule 3** Same device ID used by 5 or more different accounts                     
 
 
 
@@ -32,7 +32,7 @@ Project Files
 
 The `suspicious_transactions_report.xlsx` file includes:
 `transaction_id`, `account_id`, `txn_amount`, `txn_time`, `location`, `device_id`
-*Flags*: `high_value_flag`, `freq_flag`, `device_flag`, `suspicious`
+**Flags**: `high_value_flag`, `freq_flag`, `device_flag`, `suspicious`
 
 
 
